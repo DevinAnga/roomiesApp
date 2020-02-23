@@ -1,0 +1,41 @@
+.Bills-topNav {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+.Bills-nav {
+    text-align: right;
+    width: 100%;
+}
+
+.Bills-topNav button {
+    margin: 20px;
+    float: right;
+}
+
+.Bills-leftNav {
+    height: 800px;
+    width: 150px;
+    border-right: 1px solid black;
+    margin: 0px;
+    float: left;
+}
+
+.Bills-leftNav button {
+    margin: 20px;
+    text-align: center;
+}
+
+.Bills-mainContent {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.Bills-columns {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}

@@ -1,0 +1,19 @@
+.Navbar-stuff {
+    background-color: #2699FB;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.navLogo{
+    max-width: 40px;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.NavSection-stuff {
+    display: inline-block;
+    margin: 0 1em 0 1em;
+}
