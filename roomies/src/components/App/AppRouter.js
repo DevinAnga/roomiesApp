@@ -16,11 +16,11 @@ export default function() {
   return (
     <Switch>
       <Route
-          // exact
-          // path="/"
+          exact
+          path="/"
           // render={() => <Home handleLogin={this.handleLogin} />}
-          // render={() => <Home />}
-          render={() => <Registration />}
+          render={() => <Home />}
+          // render={() => <Registration />}
       />
 
       <Route
@@ -28,7 +28,7 @@ export default function() {
         path="/About"
         render={() => <About name="Pugsy" city="London" />}
       />
-      {/* <Route exact path="/Registration" render={() => <Registration />} /> */}
+      <Route exact path="/Registration" render={() => <Registration />} />
       <Route exact path="/Login" render={() => <Login />} />
       <Route exact path="/Bills" component={Bills} />
       <Route exact path="/GroupChat" component={GroupChat} />

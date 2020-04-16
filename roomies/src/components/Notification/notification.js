@@ -3,8 +3,8 @@ import styled from "styled-components";
 import ee from "event-emitter";
 
 const Container = styled.div`
-    background-color: #444;
-    color: white;
+    background-color: #E3E3E3;
+    color: #262626;
     padding: 16px;
     position: absolute;
     top: ${ props => props.top }px;
@@ -28,7 +28,7 @@ export default class Notificaions extends React.Component{
         super(props);
 
         this.state = {
-            top: -100,
+            top: -200,
             msg: "",
         };
 
@@ -44,7 +44,7 @@ export default class Notificaions extends React.Component{
     onShow = (msg) => {
         if(this.timeout){
             clearTimeout(this.timeout);
-            this.setState({ top: -100 }, () => {
+            this.setState({ top: -200 }, () => {
                 this.timeout = setTimeout( () => {
                     this.showNotification(msg);
                 }, 500);
@@ -61,7 +61,7 @@ export default class Notificaions extends React.Component{
         },            () => {
                 this.timeout = setTimeout(() => {
                     this.setState({ 
-                        top: -100,
+                        top: -200,
                     });
                 }, 3000);
             });
@@ -72,7 +72,7 @@ export default class Notificaions extends React.Component{
     render(){
         return(
                 //depending on the state, the notification will either be displayed or hidden
-                <Container top={this.state.top}>Registration Confirmation Sent</Container>
+                <Container top={this.state.top}>Email Notification Sent</Container>
             
         );
     }

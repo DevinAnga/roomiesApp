@@ -4,6 +4,7 @@ import "../../../auth/auth.scss";
 import PopUpCard from "../../../GenericComponents/PopUpCard";
 import { HouseContext } from "../HouseContext";
 import uuid from "uuid";
+import Notifications, { notify } from "../../../Notification/notification";
 
 function AddTenantsPop() {
   const { toggleAddTenants, handleNewTenant } = useContext(HouseContext);
@@ -44,6 +45,7 @@ function AddTenantsPop() {
 
   const doSubmit = event => {
     event.preventDefault();
+    notify("Registration Confirmation Sent");
 
     if (validate()) {
       handleAddTenant();
@@ -52,6 +54,9 @@ function AddTenantsPop() {
   };
 
   return (
+   <div>
+     <Notifications/>
+  
     <PopUpCard togglePop={toggleAddTenants}>
       <div>
         <p className="form-text">
@@ -76,6 +81,7 @@ function AddTenantsPop() {
               onChange={handleNameChange}
             />
           </div>
+         
 
           <div className="flex-container flex-between align-base form-group">
             <label htmlFor="email">Tenant Email</label>
@@ -100,8 +106,11 @@ function AddTenantsPop() {
             </button>
           </div>
         </form>
+
+       
       </div>
     </PopUpCard>
+    </div>
   );
 }
 

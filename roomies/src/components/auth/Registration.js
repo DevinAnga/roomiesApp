@@ -57,7 +57,7 @@ function Registration() {
   const doSubmit = event => {
     //This will handle the form data
     console.log("register form submit");
-    notify();
+    notify("Registration Confirmation Sent");
     event.preventDefault();
 
     /** TODO: Consider adding validation to input state hook */
