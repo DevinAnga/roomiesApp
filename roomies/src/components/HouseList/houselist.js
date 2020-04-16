@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import SideButton from "../SideBar/sidebuttons";
 import "./houselist.css";
 
 class HouseList extends Component {

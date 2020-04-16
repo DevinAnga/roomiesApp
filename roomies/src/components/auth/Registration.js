@@ -3,6 +3,7 @@ import useInputState from "../../hooks/useInputState";
 import "./auth.scss";
 import { Link } from "react-router-dom";
 import { MdArrowBack } from "react-icons/md";
+import Notifications, { notify } from "../Notification/notification";
 
 function Registration() {
   const [email, handleEmailChange, resetEmail, validateEmail] = useInputState(
@@ -56,6 +57,7 @@ function Registration() {
   const doSubmit = event => {
     //This will handle the form data
     console.log("register form submit");
+    notify();
     event.preventDefault();
 
     /** TODO: Consider adding validation to input state hook */
@@ -70,10 +72,11 @@ function Registration() {
   return (
     <div className="homeContainer guestBackground">
       <div className="from-container">
+              <Notifications/>
         <Link className="secondary-link toLeft" to="/">
           <MdArrowBack className="back-icon" /> back
         </Link>
-        <form className="card" onSubmit={doSubmit}>
+        <form className="card" onSubmit={ doSubmit }>
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -112,6 +115,7 @@ function Registration() {
           </button>
         </form>
       </div>
+      
     </div>
   );
 }
